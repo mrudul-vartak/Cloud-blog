@@ -1,0 +1,55 @@
+.first-badge {
+  margin-right: 10px;
+  font-size: 20px !important;
+  color: #000000;
+
+  :hover {
+    color: blue;
+  }
+
+  :active {
+    color: blue;
+  }
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+  margin: 10px 20px;
+}
+
+// :hover {
+//   background-color: #383737;
+//   color: black;
+// }
+
+.previous {
+  background-color: #0a0a0a;
+  color: rgb(255, 255, 255);
+}
+
+.author {
+  font-size: small;
+}
+
+.jumbotron {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  color: white;
+  background-color: #000000;
+}
+
+.glyphicon {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: "Glyphicons Halflings";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: black;
+}

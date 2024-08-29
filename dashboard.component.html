@@ -1,0 +1,14 @@
+ <!-- <button  *ngIf="!userStatus" class="button" style="margin: 10px;" routerLink="/myblogs">My Blogs</button> -->
+ <div class = "header-container">
+    <header></header> 
+</div>
+ <div class = "board">
+<div class = "board-create">
+    <button *ngIf="UserType=='Blogger'" (click)="createBlog()" style="margin: 10px;">Create blog</button>
+    <button  *ngIf="UserType=='Blogger'" class="button" style="margin: 10px;" routerLink="/myblogs">My Blogs</button>
+</div>
+<div class = "board-container">
+     <blog [user]="'null'">
+    </blog>
+</div>
+</div>

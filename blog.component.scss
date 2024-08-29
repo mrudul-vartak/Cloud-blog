@@ -1,0 +1,77 @@
+@import "../../global-color.scss";
+$blog-height: 150px;
+
+.blog {
+    display: flex;
+    flex-direction: row;
+
+    width: 80vw;
+    margin: 25px;
+
+    &-body {
+        flex-direction: column;
+        width: 100%;
+        background: #161518;
+        justify-content: space-between;
+
+        &-title {
+            display: flex;
+            background: #7d5daa;
+            color: black;
+            height: $blog-height*0.2;
+            font-size: medium;
+            font-weight: bold;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &-footer {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            background: #7d5daa;
+            height: $blog-height*0.2;
+            align-items: center;
+
+            &-author {
+                padding: 0 10px 0 10px;
+                font-weight: bold;
+            }
+
+            &-actions {
+                padding: 0 10px 0 10px;
+            }
+        }
+
+    }
+}
+
+.content {
+
+    &-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        color: #f3ebf4;
+    }
+
+    &-image {
+        display: flex;
+        max-height: $blog-height;
+        max-width: $blog-height*0.6;
+        justify-content: center;
+        align-items: center;
+        background: cornflowerblue;
+        margin-left: 1%;
+    }
+
+    &-body {
+        display: flex;
+        min-width: 38vw
+    }
+}
+
+.read-more {
+    color: black;
+}

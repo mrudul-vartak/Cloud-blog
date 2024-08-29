@@ -1,0 +1,12 @@
+.blog {
+    display: flex;
+    flex-direction: column;
+    min-width: 80vw;
+    color: white;
+
+
+
+    &-title {
+        padding-bottom: 10px;
+    }
+}

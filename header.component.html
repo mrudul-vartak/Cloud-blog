@@ -1,0 +1,16 @@
+<div class="header">
+  <div class="header-title">CLOUD BLOG APPLICATION</div>
+  <div class="header-tabs">
+    <button *ngIf="(!userStatus || userStatus == 'false') && userStatus != 'true'" class="button" style="margin: 10px"
+      routerLink="/signup">
+      REGISTER
+    </button>
+    <button *ngIf="(!userStatus || userStatus == 'false') && userStatus != 'true'" class="button" style="margin: 10px"
+      routerLink="/signin">
+      LOGIN
+    </button>
+  </div>
+  <div class="header-logout">
+    <button *ngIf="userStatus == 'true'" (click)="onLogout()">Log Out</button>
+  </div>
+</div>

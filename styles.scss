@@ -1,0 +1,15 @@
+
+/* You can add global styles to this file, and also import other style files */
+body{
+    margin: 0px;
+}
+ul{
+    margin-bottom: 0!important;
+    padding: 0 !important;
+}
+
+.header-container, .footer-container , .body-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

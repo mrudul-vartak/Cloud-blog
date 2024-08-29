@@ -1,0 +1,32 @@
+.board {
+  display: flex;
+  flex-direction: column;
+
+  &-create {
+    display: flex;
+    align-self: center;
+  }
+
+  &-container {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+  }
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+  margin: 10px 20px;
+}
+
+:hover {
+  background-color: #020202;
+  color: black;
+}
+
+.previous {
+  background-color: #f1f1f1;
+  color: black;
+}

@@ -1,0 +1,54 @@
+<div *ngIf="user == 'null'">
+  <div class="blog" *ngFor="let post of postArray">
+    <div class="blog-body">
+      <div class="blog-body-title">Title : {{ post.title }}</div>
+      <div class="content-wrapper">
+        <div class="content-image">
+          <img src="{{ post.image }}" height="100px;" width="200px" />
+        </div>
+        <div class="content-body">{{ post.content | slice: 0:300 }}....</div>
+      </div>
+
+      <div class="blog-body-footer">
+        <div class="blog-body-footer-author">
+          Created by: {{ post.username }}
+        </div>
+        <div class="blog-body-footer-actions">
+          <!-- <i class="fa fa-thumbs-up" style="font-size:24px" (click)="likePost(post.id)"></i>
+          <i class="fa fa-thumbs-down" style="font-size:24px" (click)="dislikePost(post.id)"></i> -->
+          <button class="read-more" routerLink="/read-blog/{{ post.post_id }}">
+            Read More
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="user !== null">
+  <div class="blog" *ngFor="let post of myblogs">
+    <div class="blog-body">
+      <div class="blog-body-title">Title : {{ post.title }}</div>
+      <div class="content-wrapper">
+        <div class="content-image">
+          <img src="{{ post.image }}" height="100px;" width="200px" />
+        </div>
+        <div class="content-body">{{ post.content | slice: 0:300 }}....</div>
+      </div>
+
+      <div class="blog-body-footer">
+        <div class="blog-body-footer-author">
+          Created by: {{post.username}}
+        </div>
+        <div class="blog-body-footer-actions">
+          <button class="btn-success" routerLink="/read-blog/{{ post.post_id }}">
+            Read More
+          </button>
+          <button class="btn-success" (click)="deletePost(post.post_id)">
+            Delete
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

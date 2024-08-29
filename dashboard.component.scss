@@ -1,0 +1,17 @@
+.board{
+    display: flex;
+    flex-direction: column;
+    &-create{
+        display: flex;
+        align-self: center;
+    }
+    &-container{
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+    }   
+}.header-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

@@ -1,0 +1,63 @@
+<div class = "header-container">
+  <header></header> 
+</div>
+<div class = "body-container">
+<div class = "blog">
+<div class = "blog-title"><h2>New Blog</h2></div>
+<div *ngIf="loader" class="d-flex justify-content-center">
+  <div  class="spinner-border text-primary loader-create" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
+</div>
+<div  class="blog-form">
+  <!-- <form [formGroup]="BlogPost">
+
+        <label for="title">Blog title </label>
+        <input id="title" type="text" formControlName="title">
+      
+        <label for="Content">Content  </label>
+        <input id="content" type="text-area" formControlName="content">
+      
+      </form> -->
+  <form
+    [formGroup]="blogForm"
+    autocomplete="off"
+    (ngSubmit)="isEdit ? onEditBlog() : onCreateBlog()"
+  > 
+    <div class="form-group">
+        <label for="logo">Upload a cover image link for your blog</label> <br>
+        <input type="text"  name="imageUpload" id="imageUpload"
+        class="form-control"
+        formControlName="imageUpload" required />
+    </div> 
+    <div class="form-group">
+      <label for="title">Title:</label>
+      <input
+        type="text"
+        id="title"
+        class="form-control"
+        formControlName="title"
+      />
+    </div>
+    <div class="form-group">
+      <label for="content">Content:</label>
+      <textarea
+        type="text"
+        rows="15"
+        id="content"
+        class="form-control"
+        formControlName="content"
+      ></textarea>
+    </div>
+    <div class="btn-group">
+      <button class="btn btn-sm btn-success" type="submit">
+        Submit
+      </button>
+      <button class="btn btn-sm btn-warning" type="button" (click)="onCancel()">
+        Discard
+      </button>
+    </div>
+  </form>
+</div>
+</div>
+</div>

@@ -1,0 +1,32 @@
+@import "../../global-color.scss";
+
+.footer {
+    background: $neutral-dark-color;
+    width: 100vw;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    &-body {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-weight: normal;
+        font-size: 0.8em;
+        padding: 0 10px 0 10px;
+        color: #f8f8f8;
+    }
+
+    &-heading {
+        display: flex;
+
+    }
+
+    &-content {
+        display: flex;
+        align-items: center;
+        font-size: 0.6em;
+    }
+}
